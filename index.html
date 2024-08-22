@@ -114,32 +114,22 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-technologystack">
+        <li class="menu-item menu-item-categories">
 
-    <a href="/technologystack/" rel="section"><i class="sitemap fa-fw"></i>技术栈</a>
-
-  </li>
-        <li class="menu-item menu-item-project">
-
-    <a href="/project/" rel="section"><i class="project-diagram fa-fw"></i>项目经历</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
-        <li class="menu-item menu-item-interview">
+        <li class="menu-item menu-item-archives">
 
-    <a href="/interview/" rel="section"><i class="fire fa-fw"></i>面试手册</a>
-
-  </li>
-        <li class="menu-item menu-item-leetcode">
-
-    <a href="/leetcode/" rel="section"><i class="frog fa-fw"></i>刷题小记</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
   </ul>
@@ -169,6 +159,288 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/22/Linux-%E5%91%BD%E4%BB%A4-day03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Hazel">
+      <meta itemprop="description" content="勇敢的人先享受世界">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LuckyHazel">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/08/22/Linux-%E5%91%BD%E4%BB%A4-day03/" class="post-title-link" itemprop="url">Linux 命令 -- day03</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-08-22 23:20:10 / 修改时间：23:20:42" itemprop="dateCreated datePublished" datetime="2024-08-22T23:20:10+08:00">2024-08-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/" itemprop="url" rel="index"><span itemprop="name">技术栈</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><code>Title:</code> [[Linux 命令 – day03]]</li>
+<li><code>Tags:</code> #🛠️ </li>
+<li><code>Author:</code> Hazel🥰</li>
+<li><code>Description:</code> </li>
+<li><code>Creation time:</code> <code>2024-08-20 22:53</code></li>
+<li><code>Reviewed Date:</code> [[2024-08-20]]</li>
+<li><code>个人小结：</code><ul>
+<li>chmod</li>
+<li>find</li>
+<li>ln -s</li>
+<li>tar&#x2F;gzip&#x2F;zip&#x2F;unzip</li>
+<li>vi 命令行文本编辑器</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Linux-命令-7-chmod-修改文件权限"><a href="#Linux-命令-7-chmod-修改文件权限" class="headerlink" title="Linux 命令 7: chmod 修改文件权限"></a>Linux 命令 7: chmod 修改文件权限</h1><h2 id="文件权限的解读方法"><a href="#文件权限的解读方法" class="headerlink" title="文件权限的解读方法"></a>文件权限的解读方法</h2><p><code>ls -l</code> – 查看文件的详细信息<br>    第一位：文件类型  <code>-</code> 为普通文件 <code>d</code> 文件夹<br>    后续每三个值为一部分，一共为三个部分：<code>用户/用户组/其他人</code><br>    每一组的组成 <code>r/w/x/-</code> 对应权限为 <code>读取/写入/执行/无权限</code><br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_1.png)<br>对照表<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_2.png)</p>
+<h2 id="【掌握】修改文件权限：数字法"><a href="#【掌握】修改文件权限：数字法" class="headerlink" title="【掌握】修改文件权限：数字法"></a>【掌握】修改文件权限：数字法</h2><p>权限对应数值<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_3.png)<br>案例实现<br><code>touch cm_demo</code> – 创建文件<br><code>ll 等价于 ls -l</code> – 查看文件的权限状态<br><code>chmod 763 cm_demo</code> – 修改文件的权限，16 进制（读写执行-读写-写执行）<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_4.png)</p>
+<h2 id="修改文件权限：字母法"><a href="#修改文件权限：字母法" class="headerlink" title="修改文件权限：字母法"></a>修改文件权限：字母法</h2><p>组别: <code>u</code> 拥有者   <code>g</code> 用户组   <code>o</code> 其他⼈   <code>a</code> 以上全部<br>修改: <code>+</code> 增加权限  <code>-</code> 删除权限  <code>=</code> 赋予权限<br>权限: <code>r</code> 可读   <code>w</code> 可写  <code>x</code> 可执行  <code>-</code> ⽆权限<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_5.png)</p>
+<blockquote>
+<ol>
+<li>必须明确文件权限的含义</li>
+<li>使用数字法或者字母法均可</li>
+<li>尽量不要随意赋予文件最高权限：数字法 <code>777</code> 字母法 <code>rwxrwxrwx</code></li>
+<li>建议适当修改文件权限：数字法 <code>755</code> 字母法 <code>rwxr-xr-x</code>，除拥有者外均无可写权限，以此来保证文件内容安全</li>
+</ol>
+</blockquote>
+<h1 id="Linux-命令-9-find-查找文件"><a href="#Linux-命令-9-find-查找文件" class="headerlink" title="Linux 命令 9: find 查找文件"></a>Linux 命令 9: find 查找文件</h1><p><code>find 查找路径信息 -name 目标文件名</code><br>    可利用 <code>*</code> 实现模糊匹配<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_6.png)</p>
+<h1 id="Linux-命令-10-ln-s-链接文件"><a href="#Linux-命令-10-ln-s-链接文件" class="headerlink" title="Linux 命令 10: ln -s 链接文件"></a>Linux 命令 10: ln -s 链接文件</h1><p>注：需要使用 <code>-s</code> 创建软连接（类似于 Windows 系统下的快捷方式）<br><code>ln -s 原文件名 链接文件名</code> – 软链接，类似于 Windows 系统下的快捷方式<br><code>ln 原文件名 链接文件名</code> – 硬链接，类似于复制文件<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_7.png)<br>扩展：硬链接<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_8.png)</p>
+<h1 id="Linux-命令-11-tar-gzip-zip-unzip"><a href="#Linux-命令-11-tar-gzip-zip-unzip" class="headerlink" title="Linux 命令 11: tar&#x2F;gzip&#x2F;zip&#x2F;unzip"></a>Linux 命令 11: tar&#x2F;gzip&#x2F;zip&#x2F;unzip</h1><h2 id="Part-1-tar-gzip-打包压缩和解压解包"><a href="#Part-1-tar-gzip-打包压缩和解压解包" class="headerlink" title="Part 1: tar&#x2F;gzip 打包压缩和解压解包"></a>Part 1: tar&#x2F;gzip 打包压缩和解压解包</h2><p><code>tar -zcvf 包名.tar.gz 目标文件</code> – 打包和压缩<br><code>tar -zxvf 包名.tar.gz -C 解压目录</code> – 解压和解包<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_9.png)</p>
+<h2 id="Part-2-zip-压缩-unzip-解压"><a href="#Part-2-zip-压缩-unzip-解压" class="headerlink" title="Part 2: zip 压缩&#x2F;unzip 解压"></a>Part 2: zip 压缩&#x2F;unzip 解压</h2><p><code>zip -r 压缩包名 目标文件</code> – 压缩，目标为文件夹时使用 <code>-r</code> 来处理文件夹内部的所有文件<br><code>unzip -d 解压路径 压缩包名</code> – 解压<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_10.png)</p>
+<h1 id="Linux-命令-12-vi-命令行文本编辑器"><a href="#Linux-命令-12-vi-命令行文本编辑器" class="headerlink" title="Linux 命令 12: vi 命令行文本编辑器"></a>Linux 命令 12: vi 命令行文本编辑器</h1><p>基本操作流程<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_11.png)<br>命令模式<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_12.png)<br>输入模式<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_13.png)<br>末行模式<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_14.png)</p>
+<h1 id="yum-软件包管理工具"><a href="#yum-软件包管理工具" class="headerlink" title="yum 软件包管理工具"></a>yum 软件包管理工具</h1><p>&#x3D;&#x3D;yum&#x3D;&#x3D;（ Yellow dog Updater, Modified）：是⼀个在 Linux 系统中常用的软件包管理器。<br>    yum 提供了查找、安装、删除某⼀个、⼀组甚⾄全部软件包的命令，⽽且命令简洁又好记。<br>常用命令：<br>    yum list: 列出所有可安装的软件清单<br>    yum search: 查找软件包<br>    yum install <package_name>: 安装指定的软件<br>    yum update <package_name>: 更新指定的软件<br>    yum update: 更新所有软件<br>    yum remove <package_name>: 删除软件包</p>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><p>说明:  数据库是专门用来存储数据的软件<br>注意: 对于测试工作而言, 如果项目页面没有实现, 但是我们又想要校验数据,则可以直接通过查询数据库实现<br>关系: 具体存在的商品录⼊后 -&gt; 产⽣对应的数据(存到数据库中) -&gt; 最后会被加载到项目页面中</p>
+<h2 id="数据库分类"><a href="#数据库分类" class="headerlink" title="数据库分类"></a>数据库分类</h2><p>分类:<br>    1&gt; 关系型数据库: 以数据表为核心<br>    2&gt; ⾮关系型数据库: 不存在数据表的概念<br>关系型数据库: RDMS(Relational Database Management System)关系型数据库系统<br>常见的关系型数据库:<br>    Oracle: 在⼤型项⽬中使⽤，例如：银⾏、电信等项⽬<br>    MySQL: Web 项⽬中使⽤最⼴泛的关系型数据库<br>    Microsoft SQL Server: 在微软的项⽬中使⽤<br>    SQLite: 轻量级数据库，主要应⽤在移动平台<br>关系型数据库的核心要素:<br>    数据行（⼀条记录）<br>    数据列（字段）<br>    数据表（数据行的集合）<br>    数据库（数据表的集合，⼀个数据库中能够有 n 多个数据表）</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/22/Linux-%E5%91%BD%E4%BB%A4-day02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Hazel">
+      <meta itemprop="description" content="勇敢的人先享受世界">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LuckyHazel">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/08/22/Linux-%E5%91%BD%E4%BB%A4-day02/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-08-22 23:19:54" itemprop="dateCreated datePublished" datetime="2024-08-22T23:19:54+08:00">2024-08-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>- </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/22/Linux-%E5%91%BD%E4%BB%A4-day02-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Hazel">
+      <meta itemprop="description" content="勇敢的人先享受世界">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LuckyHazel">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/08/22/Linux-%E5%91%BD%E4%BB%A4-day02-1/" class="post-title-link" itemprop="url">Linux 命令 -- day02</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-08-22 23:19:12 / 修改时间：23:20:38" itemprop="dateCreated datePublished" datetime="2024-08-22T23:19:12+08:00">2024-08-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/" itemprop="url" rel="index"><span itemprop="name">技术栈</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><code>Title:</code> [[Linux 命令 – day02]]</li>
+<li><code>Tags:</code> #🛠️</li>
+<li><code>Author:</code> Hazel🥰</li>
+<li><code>Description:</code></li>
+<li><code>Creation time:</code> <code>2024-08-20 18:31</code></li>
+<li><code>Reviewed Date:</code> [[2024-08-20]]</li>
+<li><code>个人小结：</code><ul>
+<li>cat&#x2F;more&#x2F;grep&#x2F;重定向&#x2F;管道符&#x2F;clear</li>
+<li>head&#x2F;tail&#x2F;tail -f</li>
+<li>重启关机&#x2F;查看系统信息</li>
+<li>ps&#x2F;kill&#x2F;top</li>
+<li>netstat&#x2F;lsof</li>
+<li>which&#x2F;su&#x2F;passwd&#x2F;exit&#x2F;who</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Linux-命令2-cat-more-grep-重定向-管道符-clear"><a href="#Linux-命令2-cat-more-grep-重定向-管道符-clear" class="headerlink" title="Linux 命令2: cat&#x2F;more&#x2F;grep&#x2F;重定向&#x2F;管道符&#x2F;clear"></a>Linux 命令2: cat&#x2F;more&#x2F;grep&#x2F;重定向&#x2F;管道符&#x2F;clear</h1><h2 id="Part-1-cat-重定向"><a href="#Part-1-cat-重定向" class="headerlink" title="Part 1 cat&#x2F;重定向"></a>Part 1 cat&#x2F;重定向</h2><p>显示所有文件和详细信息 ：<br>    <code>ls -al</code> – a 表示显示目录下所有文件（包括隐藏文件），l 表示以列表形式展示文件的详细信息 —–&gt; <code>ls -al 路径信息</code><br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day02_image_1.png)<br>    将命令执行结果信息输出到文件中<br>    <code>ls -al / </code> – 命令结果显示在终端<br>    <code>ls -al / &gt; demo</code> – 命令结果写入文件<br>![](images&#x2F;Linux 命令 – day02_image_2.png)<br>    查看文件内容（较少内容文件）<br>    <code>cat 文件名</code><br>![](images&#x2F;Linux 命令 – day02_image_3.png)<br>    追加重定向<br>    <code>ls -al /usr/bin/ &gt;&gt; demo</code> – 将&#x2F;usr&#x2F;bin 目录下的所有文件的详细信息追加到 demo 文件中<br>        <code>&gt;</code> – 覆盖<br>        <code>&gt;&gt;</code> – 追加<br>![](images&#x2F;Linux 命令 – day02_image_4.png)</p>
+<h2 id="补充：cat-合并查看多个文件内容"><a href="#补充：cat-合并查看多个文件内容" class="headerlink" title="补充：cat 合并查看多个文件内容"></a>补充：cat 合并查看多个文件内容</h2><p><code>cat 文件名1 文件名2</code> – 合并显示两个文件的内容<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day02_image_5.png)</p>
+<h2 id="Part-2-less-more-分屏显示文件内容"><a href="#Part-2-less-more-分屏显示文件内容" class="headerlink" title="Part 2 less&#x2F;more 分屏显示文件内容"></a>Part 2 less&#x2F;more 分屏显示文件内容</h2><p><code>less</code> 和 <code>more</code> 都用于查看内容较多的文件信息<br>    <code>空格键</code> – 向下翻页<br>    <code>B</code> – 向上翻页<br>    <code>Q</code> –退出查看<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day02_image_6.png)</p>
+<h2 id="Part-3-grep-管道符-clear"><a href="#Part-3-grep-管道符-clear" class="headerlink" title="Part 3 grep&#x2F;|管道符&#x2F;clear"></a>Part 3 grep&#x2F;|管道符&#x2F;clear</h2><p><code>grep 内容 文件名</code><br>    <code>grep mysql demo</code>：查找 demo 文件内容包含 mysql 的信息<br><code>ls -al /usr/bin | grep mysql</code><br>    Linux 允许将一个命令的输出通过管道作为另一个命令的输入<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day02_image_7.png)</p>
+<h1 id="Linux-命令3-head-tail-tail-f"><a href="#Linux-命令3-head-tail-tail-f" class="headerlink" title="Linux 命令3: head&#x2F;tail&#x2F;tail -f"></a>Linux 命令3: head&#x2F;tail&#x2F;tail -f</h1><h2 id="Part-1-head-tail"><a href="#Part-1-head-tail" class="headerlink" title="Part 1 head&#x2F;tail"></a>Part 1 head&#x2F;tail</h2><p><code>head</code><br>    <code>head 文件名</code> – 查看文件前 10 行的内容<br>    <code>head -数字 文件名</code> – 查看文件指定前几行的内容<br><code>tail</code><br>    <code>tail 文件名</code> – 查看文件后 10 行的内容<br>    <code>tail -数字 文件名</code> – 查看文件特定后几行的内容<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day02_image_8.png)</p>
+<h2 id="Part-2-tail-f-实时查看日志文件内容"><a href="#Part-2-tail-f-实时查看日志文件内容" class="headerlink" title="Part 2 tail -f 实时查看日志文件内容"></a>Part 2 tail -f 实时查看日志文件内容</h2><p>准备工作：<br>    <code>ping 127.0.0.0 &gt;&gt; ping_log</code>  – 将ping 的地址的信息输出到文件中<br>实时查看日志文件内容变化：<br>    <code>tail -f ping_log</code> – 重开一个终端，动态查看文件内容信息<br>从实时变化的⽂件中获取特定⾏数内容<br>    <code>tail -数字f 文件名</code> – 获取动态信息中的某几行内容<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day02_image_9.png)<br>扩展：通过 head 和 tail 同时使用获取特定行和行之间信息<br>获取某文件 11-15 行的内容</p>
+<ol>
+<li>通过 head 获取前 15 行内容： <code>head -15 demo</code></li>
+<li>配合 tail 获取截止到起始行的信息：<code>head -15 demo | tail -5</code></li>
+</ol>
+<h1 id="Linux-命令4-重启关机-查看系统信息"><a href="#Linux-命令4-重启关机-查看系统信息" class="headerlink" title="Linux 命令4: 重启关机&#x2F;查看系统信息"></a>Linux 命令4: 重启关机&#x2F;查看系统信息</h1><h2 id="查看系统信息"><a href="#查看系统信息" class="headerlink" title="查看系统信息"></a>查看系统信息</h2><p><code>cat /proc/version</code> – 查看当前系统的内核版本信息<br><code>cat /etc/redhat-release</code> – 查看当前系统发行版本信息</p>
+<blockquote>
+<p>注：<br>1）不同系统的版本信息查看都是通过查看特定文件内容来获取，不同系统的文件名可能不一样；<br>2）其他系统需要获取系统版本信息，可以搜索：系统类型 + 内核版本&#x2F;发行版本，例如：CentOS 内核版本查询<br>![](images&#x2F;Linux 命令 – day02_image_10.png)</p>
+</blockquote>
+<h2 id="重启和关机：需要账号有对应权限"><a href="#重启和关机：需要账号有对应权限" class="headerlink" title="重启和关机：需要账号有对应权限"></a>重启和关机：需要账号有对应权限</h2><p><code>reboot</code> – 重启系统<br><code>poweroff / shutdown</code> – 关闭系统</p>
+<h1 id="Linux-命令-5-ps-kill-top"><a href="#Linux-命令-5-ps-kill-top" class="headerlink" title="Linux 命令 5: ps&#x2F;kill&#x2F;top"></a>Linux 命令 5: ps&#x2F;kill&#x2F;top</h1><p>&#x3D;&#x3D;进程&#x3D;&#x3D;：在任何系统中, 运行软件程序时, 都会有⼀个对应的进程信息存在, 如果结束掉进程, 就可以实现关闭对应软件程序的操作, 尤其是在服务系统(Linux)中</p>
+<h2 id="Part-1-查看进程信息-文件上传操作"><a href="#Part-1-查看进程信息-文件上传操作" class="headerlink" title="Part 1 查看进程信息&#x2F;文件上传操作"></a>Part 1 查看进程信息&#x2F;文件上传操作</h2><p><code>ps -aux</code> – 查看进程信息<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day02_image_11.png)<br>Linux 系统中结束或关闭程序的基本步骤<br><code>ps -aux | grep 程序名</code> – 获取目标程序的进程 ID（PID)<br><code>kill -9 进程ID</code> – 强制结束或关闭对应软件程序</p>
+<h2 id="Part-2-运行程序-获取进程ID-结束程序"><a href="#Part-2-运行程序-获取进程ID-结束程序" class="headerlink" title="Part 2 运行程序&#x2F;获取进程ID&#x2F;结束程序"></a>Part 2 运行程序&#x2F;获取进程ID&#x2F;结束程序</h2><p>运行程序<br>    1 查看当前系统下的进程信息：<code>ls</code><br>    2 手动打开其中的文件 nmon_x 86_64_centos 7：<code>./nmon_x 86_64_centos 7</code><br>        如果权限不够，可以使用 <code>chmod 755 nmon_x 86_64_centos 7</code> 修改文件权限<br>运行结果和程序介绍<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day02_image_12.png)<br>获取进程 ID<br>    <code>ps -aux | grep nmon</code><br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day02_image_13.png)<br>结束程序<br><code>kill -9 进程ID</code> – <code>-9</code> 表示强制结束<br>    <code>kill -9 131067</code> ：杀死例子中的进程</p>
+<h2 id="Part-3-命令行形式的任务管理器"><a href="#Part-3-命令行形式的任务管理器" class="headerlink" title="Part 3 命令行形式的任务管理器"></a>Part 3 命令行形式的任务管理器</h2><p><code>top</code> – 命令行形式的任务管理器<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day02_image_14.png)</p>
+<h1 id="Linux-命令-6-netstat-lsof"><a href="#Linux-命令-6-netstat-lsof" class="headerlink" title="Linux 命令 6: netstat&#x2F;lsof"></a>Linux 命令 6: netstat&#x2F;lsof</h1><p>&#x3D;&#x3D;端口号&#x3D;&#x3D;：<br>    说明：想要连接至计算机 – 需要使用 IP 地址；想获取在计算机上运行的程序，需要通过端口号<br>    注意：同⼀台计算机不能有多个程序同时使用同一个端口号，因此在运行程序时，如果提示“端口号被占用”，需要先找到占用端口号的程序并结束掉，然后才能运行目标程序<br>    常见端口号：<br>        1&gt; HTTP: 80<br>        2&gt; HTTPS: 443<br>         3&gt; SSH: 22<br>         4&gt; MySQL : 3306</p>
+<h2 id="Part-1-netstat-查询端口号信息"><a href="#Part-1-netstat-查询端口号信息" class="headerlink" title="Part 1 netstat 查询端口号信息"></a>Part 1 netstat 查询端口号信息</h2><p>使用普通用户查看不了 PID 和程序名称<br> ![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day02_image_15.png)<br> 直接使用命令 -&gt; 查看系统内已开放的端口号<br>     <code>netstat -anptu</code><br> ![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day02_image_16.png)<br> 通过端口号获取对应程序及进程 ID<br>     <code>netstat -anptu | grep mysql</code> – 配合 grep 命令过滤结果信息</p>
+<h2 id="Part-2-lsof-查询端口号信息"><a href="#Part-2-lsof-查询端口号信息" class="headerlink" title="Part 2 lsof 查询端口号信息"></a>Part 2 lsof 查询端口号信息</h2><p>使用普通用户 -&gt; 命令运行无结果<br>通过端口号获取对应程序及进程 ID : 注意命令选项的语法要求!<br>    <code>lsof -i:3306</code><br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day02_image_17.png)</p>
+<h1 id="Linux-命令-8-which-su-passwd-exit-who"><a href="#Linux-命令-8-which-su-passwd-exit-who" class="headerlink" title="Linux 命令 8: which&#x2F;su&#x2F;passwd&#x2F;exit&#x2F;who"></a>Linux 命令 8: which&#x2F;su&#x2F;passwd&#x2F;exit&#x2F;who</h1><h2 id="查看程序位置"><a href="#查看程序位置" class="headerlink" title="查看程序位置"></a>查看程序位置</h2><p><code>which 程序名</code> – 查看程序所在位置<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day03_image_1.png)</p>
+<h2 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h2><p><code>su -</code> – 普通用户切换到 root 用户，之后需要输入 root 用户的密码<br><code>su - admin</code> – root 用户切换为普通用户<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day03_image_2.png)</p>
+<h2 id="查看用户信息"><a href="#查看用户信息" class="headerlink" title="查看用户信息"></a>查看用户信息</h2><p><code>whoami</code> – 查看当前的用户名<br><code>who -q</code> – 查看当前系统重所有登录用户的信息<br>![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day02-1\Linux 命令 – day03_image_3.png)</p>
+<h2 id="退出终端窗口"><a href="#退出终端窗口" class="headerlink" title="退出终端窗口"></a>退出终端窗口</h2><p><code>exit</code> – 终端窗口执行，关闭终端</p>
+<h2 id="退出远程连接"><a href="#退出远程连接" class="headerlink" title="退出远程连接"></a>退出远程连接</h2><p><code>exit</code> – 远程工具执行，断开连接</p>
+<h2 id="退出用户"><a href="#退出用户" class="headerlink" title="退出用户"></a>退出用户</h2><p>切换用户后，执行 <code>exit</code></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/22/Linux-%E5%91%BD%E4%BB%A4-day01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -194,7 +466,20 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-08-22 22:32:49 / 修改时间：22:40:26" itemprop="dateCreated datePublished" datetime="2024-08-22T22:32:49+08:00">2024-08-22</time>
+              <time title="创建时间：2024-08-22 22:32:49 / 修改时间：23:16:08" itemprop="dateCreated datePublished" datetime="2024-08-22T22:32:49+08:00">2024-08-22</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/" itemprop="url" rel="index"><span itemprop="name">技术栈</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
             </span>
 
           
@@ -208,7 +493,51 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <ul>
+<li><code>Title:</code> [[Linux 命令 – day01]]</li>
+<li><code>Tags:</code> #🛠️</li>
+<li><code>Author:</code> Hazel🥰</li>
+<li><code>Description:</code></li>
+<li><code>Creation time:</code> <code>2024-08-19 23:25</code></li>
+<li><code>Reviewed Date:</code> [[2024-08-19]]</li>
+<li><code>个人小结：</code> ls 列出所有文件&#x2F;pwd 查询当前路径&#x2F;cd 转到&#x2F;touch 创建文件&#x2F;mkdir 创建文件夹&#x2F;cp 复制 &#x2F;mv 移动或重命名&#x2F;rm 删除</li>
+</ul>
+<hr>
+<h2 id="阶段内容"><a href="#阶段内容" class="headerlink" title="阶段内容"></a>阶段内容</h2><p>Linux 命令使用：为了与服务器设备进行交互而准备的技能，如远程连接、命令使用<br>数据库的使用：MySQL 对数据的增删改查。重点掌握查询操作</p>
+<hr>
+<h1 id="01-操作系统"><a href="#01-操作系统" class="headerlink" title="01 操作系统"></a>01 操作系统</h1><h2 id="1-1-介绍"><a href="#1-1-介绍" class="headerlink" title="1.1 介绍"></a>1.1 介绍</h2><p>说明：所有硬件设备组装完成后的第一层软件，能够使用户使用硬件设备的软件即为操作系统</p>
+<h2 id="1-2-分类"><a href="#1-2-分类" class="headerlink" title="1.2 分类"></a>1.2 分类</h2><p>桌面操作系统：Windows&#x2F;macOS&#x2F;Linux<br>移动端操作系统: Android (安卓)&#x2F;iOS (苹果)<br>服务器操作系统：Linux&#x2F;Windows Server<br>嵌入式操作系统：Android (底层是 Linux)</p>
+<h1 id="02-Linux-系统"><a href="#02-Linux-系统" class="headerlink" title="02 Linux 系统"></a>02 Linux 系统</h1><p>说明：在服务器端最常见的操作系统</p>
+<h2 id="2-1-Linux-发行版本"><a href="#2-1-Linux-发行版本" class="headerlink" title="2.1 Linux 发行版本"></a>2.1 Linux 发行版本</h2><p>说明：在原版 Linux 系统的基础上，额外增加一些常用软件的操作系统<br>注释：类似于原生安卓系统和现行的华为系统&#x2F;小米系统等之间的关系<br><img src="/image/Linux/Linux%20%E5%91%BD%E4%BB%A4%20--%20day01_image_1.png"></p>
+<h2 id="2-2-文件和路径"><a href="#2-2-文件和路径" class="headerlink" title="2.2 文件和路径"></a>2.2 文件和路径</h2><p>说明：不同于 Windows 系统的⽂件路径的起点是盘符，Linux 系统的路径起点是’&#x2F;‘根目录<br>注意：</p>
+<blockquote>
+<ol>
+<li>&#x2F; 为根目录，是所有文件的路径的起点</li>
+<li>根目录下的所有第一层级的文件夹，均不能随意进行修改</li>
+<li>掌握常用目录的作用即可</li>
+<li>&#x2F; 根目录，&#x2F;home 普通用户所在文件夹，&#x2F;root 系统管理员所在文件夹</li>
+</ol>
+</blockquote>
+<p><img src="/image/Linux/Linux%20%E5%91%BD%E4%BB%A4%20--%20day01_image_2.png"></p>
+<h1 id="03-远程连接操作"><a href="#03-远程连接操作" class="headerlink" title="03 远程连接操作"></a>03 远程连接操作</h1><p>说明：通过[远程连接⼯具]连接到服务器的操作即为远程连接<br>条件：<br>    1&gt; 服务器的 IP 地址<br>    2&gt; 服务器的账号和密码<br>注意：必须确保有网络连接条件</p>
+<h2 id="3-1-常见的远程连接工具"><a href="#3-1-常见的远程连接工具" class="headerlink" title="3.1 常见的远程连接工具"></a>3.1 常见的远程连接工具</h2><p>1 &gt; FinalShell（推荐）：功能强大，有颜值，好操作 (高级功能需要订阅)<br>2 &gt; XShell：个人用免费、商用收费<br>3 &gt; Putty：免费开源的<br>4 &gt; SecureCRT：收费<br>5 &gt; MobaXterm：免费</p>
+<h2 id="3-2-远程连接基本步骤"><a href="#3-2-远程连接基本步骤" class="headerlink" title="3.2 远程连接基本步骤"></a>3.2 远程连接基本步骤</h2><p>入职后需要向相关人员 (运维&#x2F;开发) 获取服务器 IP 地址及账号密码等信息<br>配合远程连接工具 (根据公司要求使用对应工具)，配置连接使用服务器即可</p>
+<h2 id="3-3-远程连接操作步骤"><a href="#3-3-远程连接操作步骤" class="headerlink" title="3.3 远程连接操作步骤"></a>3.3 远程连接操作步骤</h2><p>获取服务器 IP 地址<br>    打开服务器终端输入指令 <code>ifconfig</code> 获取 IP 地址信息<br>    默认可使用 <code>ip addr</code> 获取 IP 地址<br>在本地测试连通性<br>    在本机使用 <code>ping</code> 命令行来测试与服务器的连通性</p>
+<h2 id="3-4-远程连接工具设置步骤"><a href="#3-4-远程连接工具设置步骤" class="headerlink" title="3.4 远程连接工具设置步骤"></a>3.4 远程连接工具设置步骤</h2><p>新建 –&gt; SSH 连接<br>    远程连接依赖的命令 <code>SSH</code></p>
+<p><img src="/image/Linux/Linux%20%E5%91%BD%E4%BB%A4%20--%20day01_image_3.png"></p>
+<p><img src="/image/Linux/Linux%20%E5%91%BD%E4%BB%A4%20--%20day01_image_4.png"></p>
+<h1 id="04-Linux"><a href="#04-Linux" class="headerlink" title="04 Linux"></a>04 Linux</h1><h2 id="4-1-Linux-命令学习原则"><a href="#4-1-Linux-命令学习原则" class="headerlink" title="4.1 Linux 命令学习原则"></a>4.1 Linux 命令学习原则</h2><p>不要死记硬背 Linux 命令<br>务必要明确命令的基本组成形式</p>
+<h2 id="4-2-Linux-命令操作技巧"><a href="#4-2-Linux-命令操作技巧" class="headerlink" title="4.2 Linux 命令操作技巧"></a>4.2 Linux 命令操作技巧</h2><p>善用 <code>tab</code> 键进行文件名 &#x2F; 路径名 &#x2F; 命令的自动补全<br>使用 <code>↑  ↓ </code> 快速获取先前输入过的命令<br>命令开始执行后，若需要取消执行：<code>Ctrl + C</code></p>
+<h2 id="4-3-Linux-命令的基本组成"><a href="#4-3-Linux-命令的基本组成" class="headerlink" title="4.3 Linux 命令的基本组成"></a>4.3 Linux 命令的基本组成</h2><p># 命令  [-选项]  [参数]<br>command [-options] [parameter]<br>说明：<br>    command : 命令主体<br>    [-options] : 命令选项(可选), 根据命令可以显示更更加丰富的数据<br>    [parameter] : 命令参数(可选)，命令的操作对象，一般文件、目录、用户和进程等都可以作为参数被命令操作</p>
+<h1 id="05-Linux-命令-案例-1"><a href="#05-Linux-命令-案例-1" class="headerlink" title="05 Linux 命令 - 案例 1"></a>05 Linux 命令 - 案例 1</h1><p>ls&#x2F;pwd&#x2F;cd&#x2F;touch&#x2F;mkdir&#x2F;cp&#x2F;mv&#x2F;rm</p>
+<h3 id="Part-1-ls-pwd-cd-touch-mkdir"><a href="#Part-1-ls-pwd-cd-touch-mkdir" class="headerlink" title="Part 1 ls&#x2F;pwd&#x2F;cd&#x2F;touch&#x2F;mkdir"></a>Part 1 ls&#x2F;pwd&#x2F;cd&#x2F;touch&#x2F;mkdir</h3><p><code>pwd</code> – 查看当前路径位置<br><code>ls</code> – 查看当前目录下有哪些文件和文件夹<br><code>mkdir</code> – 创建一个文件夹&#x2F;创建多个文件夹<br><code>cd</code> – 切换到 xx 目录下<br><code>touch</code> – 创建一个文件<br><img src="/image/Linux/Linux%20%E5%91%BD%E4%BB%A4%20--%20day01_image_5.png"></p>
+<h3 id="Part-2-cd-其他用法和-mv"><a href="#Part-2-cd-其他用法和-mv" class="headerlink" title="Part 2 cd 其他用法和 mv"></a>Part 2 cd 其他用法和 mv</h3><p><code>cd</code> – 切换目录 –&gt; 相对路径&#x2F;绝对路径<br><code>mv</code> – 默认用于移动文件到某一路径下，但如果目标文件名不是文件夹名或者文件名不存在，则视为修改文件名操作 –&gt; mv file aa （将 file 更名为 aa）<br><img src="/image/Linux/Linux%20%E5%91%BD%E4%BB%A4%20--%20day01_image_6.png"><br>相对路径和绝对路径</p>
+<blockquote>
+<p>相对路径：凡是路径信息以 <code>.</code> 或者 <code>..</code> 开头的均为相对路径<br>绝对路径：凡是路径信息以 <code>/</code> 或者 <code>~</code> 开头的均为绝对路径<br>注释：<br><code>.</code>：当前路径下，一般省略<br><code>..</code>：上一层目录<br><code>/</code>：根目录<br><code>~</code>：当前用户的家目录</p>
+</blockquote>
+<h3 id="Part-3-cp复制文件和文件夹"><a href="#Part-3-cp复制文件和文件夹" class="headerlink" title="Part 3 cp复制文件和文件夹"></a>Part 3 cp复制文件和文件夹</h3><p>复制文件：<code>cp aa adir</code> 复制文件 aa 到 adir 目录下<br>复制文件夹：<code>cp -r bdir/ cdir/</code> 复制文件夹 bdir 到 cdir 下<br><img src="/image/Linux/Linux%20%E5%91%BD%E4%BB%A4%20--%20day01_image_7.png"></p>
+<h3 id="Part-4-mv-touch-创建多个文件-rm-删除文件和文件夹及所有文件"><a href="#Part-4-mv-touch-创建多个文件-rm-删除文件和文件夹及所有文件" class="headerlink" title="Part 4 mv&#x2F;touch 创建多个文件&#x2F;rm 删除文件和文件夹及所有文件"></a>Part 4 mv&#x2F;touch 创建多个文件&#x2F;rm 删除文件和文件夹及所有文件</h3><p><code>mv aa cdir/bdir/</code> – 移动文件 aa 到 bdir 文件夹<br><code>touch bb cc</code> – 创建多个文件 bb cc<br><code>rm -i bb</code> – 删除 bb 文件<br><code>rm -ir adir/</code> – 删除 adir 文件夹<br><code>rm -f aa</code> – 强制删除<br><img src="/image/Linux/Linux%20%E5%91%BD%E4%BB%A4%20--%20day01_image_8.png"></p>
+
       
     </div>
 
@@ -359,10 +688,17 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
-          <span class="site-state-item-count">2</span>
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
 </div>
