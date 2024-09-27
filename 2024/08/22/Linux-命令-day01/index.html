@@ -22,15 +22,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Title: Linux 命令 – day01 Tags: 🛠️ Author: Hazel🥰 Description: Creation time: 2024-08-19 23:25 Reviewed Date: 2024-08-19 个人小结： ls 列出所有文件 pwd 查询当前路径 cd 转到 touch 创建文件 mkdir 创建文件夹 cp 复制 mv 移动或重命名 rm 删除">
+  <meta name="description" content="Title: Linux 命令 – day01 Tags: 🛠️ Author: Hazel🥰 Description: Creation time: 2024-08-19 23:25 Reviewed Date: 2024-08-19 个人小结：  ls 列出所有文件 pwd 查询当前路径 cd 转到 touch 创建文件 mkdir 创建文件夹 cp 复制 mv 移动或重命名 rm 删除">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 命令 -- day01">
 <meta property="og:url" content="http://example.com/2024/08/22/Linux-%E5%91%BD%E4%BB%A4-day01/index.html">
 <meta property="og:site_name" content="LuckyHazel">
-<meta property="og:description" content="Title: Linux 命令 – day01 Tags: 🛠️ Author: Hazel🥰 Description: Creation time: 2024-08-19 23:25 Reviewed Date: 2024-08-19 个人小结： ls 列出所有文件 pwd 查询当前路径 cd 转到 touch 创建文件 mkdir 创建文件夹 cp 复制 mv 移动或重命名 rm 删除">
+<meta property="og:description" content="Title: Linux 命令 – day01 Tags: 🛠️ Author: Hazel🥰 Description: Creation time: 2024-08-19 23:25 Reviewed Date: 2024-08-19 个人小结：  ls 列出所有文件 pwd 查询当前路径 cd 转到 touch 创建文件 mkdir 创建文件夹 cp 复制 mv 移动或重命名 rm 删除">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-22T14:32:49.000Z">
-<meta property="article:modified_time" content="2024-09-27T13:20:54.568Z">
+<meta property="article:modified_time" content="2024-09-27T13:22:38.456Z">
 <meta property="article:author" content="Hazel">
 <meta name="twitter:card" content="summary">
 
@@ -192,7 +192,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-09-27 21:20:54" itemprop="dateModified" datetime="2024-09-27T21:20:54+08:00">2024-09-27</time>
+                <time title="修改时间：2024-09-27 21:22:38" itemprop="dateModified" datetime="2024-09-27T21:22:38+08:00">2024-09-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -230,7 +230,8 @@
 <li><code>Description:</code></li>
 <li><code>Creation time:</code> <code>2024-08-19 23:25</code></li>
 <li><code>Reviewed Date:</code> 2024-08-19</li>
-<li><code>个人小结：</code><ul>
+<li><code>个人小结：</code>
+<ul>
 <li>ls 列出所有文件</li>
 <li>pwd 查询当前路径</li>
 <li>cd 转到</li>
@@ -243,41 +244,111 @@
 </li>
 </ul>
 <hr>
-<h2 id="阶段内容"><a href="#阶段内容" class="headerlink" title="阶段内容"></a>阶段内容</h2><p>Linux 命令使用：为了与服务器设备进行交互而准备的技能，如远程连接、命令使用<br>数据库的使用：MySQL 对数据的增删改查。重点掌握查询操作</p>
+<h2 id="阶段内容">阶段内容</h2>
+<p>Linux 命令使用：为了与服务器设备进行交互而准备的技能，如远程连接、命令使用<br>
+数据库的使用：MySQL 对数据的增删改查。重点掌握查询操作</p>
 <hr>
-<h1 id="01-操作系统"><a href="#01-操作系统" class="headerlink" title="01 操作系统"></a>01 操作系统</h1><h2 id="1-1-介绍"><a href="#1-1-介绍" class="headerlink" title="1.1 介绍"></a>1.1 介绍</h2><p>说明：所有硬件设备组装完成后的第一层软件，能够使用户使用硬件设备的软件即为操作系统</p>
-<h2 id="1-2-分类"><a href="#1-2-分类" class="headerlink" title="1.2 分类"></a>1.2 分类</h2><p>桌面操作系统：Windows&#x2F;macOS&#x2F;Linux<br>移动端操作系统: Android (安卓)&#x2F;iOS (苹果)<br>服务器操作系统：Linux&#x2F;Windows Server<br>嵌入式操作系统：Android (底层是 Linux)</p>
-<h1 id="02-Linux-系统"><a href="#02-Linux-系统" class="headerlink" title="02 Linux 系统"></a>02 Linux 系统</h1><p>说明：在服务器端最常见的操作系统</p>
-<h2 id="2-1-Linux-发行版本"><a href="#2-1-Linux-发行版本" class="headerlink" title="2.1 Linux 发行版本"></a>2.1 Linux 发行版本</h2><p>说明：在原版 Linux 系统的基础上，额外增加一些常用软件的操作系统<br>注释：类似于原生安卓系统和现行的华为系统&#x2F;小米系统等之间的关系</p>
-<p>![Linux 命令 – day01_image_1](.\img\Linux-命令-day01\Linux 命令 – day01_image_1.png)</p>
-<h2 id="2-2-文件和路径"><a href="#2-2-文件和路径" class="headerlink" title="2.2 文件和路径"></a>2.2 文件和路径</h2><p>说明：不同于 Windows 系统的⽂件路径的起点是盘符，Linux 系统的路径起点是’&#x2F;‘根目录<br>注意：</p>
+<h1>01 操作系统</h1>
+<h2 id="1-1-介绍">1.1 介绍</h2>
+<p>说明：所有硬件设备组装完成后的第一层软件，能够使用户使用硬件设备的软件即为操作系统</p>
+<h2 id="1-2-分类">1.2 分类</h2>
+<p>桌面操作系统：Windows/macOS/Linux<br>
+移动端操作系统: Android (安卓)/iOS (苹果)<br>
+服务器操作系统：Linux/Windows Server<br>
+嵌入式操作系统：Android (底层是 Linux)</p>
+<h1>02 Linux 系统</h1>
+<p>说明：在服务器端最常见的操作系统</p>
+<h2 id="2-1-Linux-发行版本">2.1 Linux 发行版本</h2>
+<p>说明：在原版 Linux 系统的基础上，额外增加一些常用软件的操作系统<br>
+注释：类似于原生安卓系统和现行的华为系统/小米系统等之间的关系</p>
+<p>![Linux 命令 – day01_image_1](img\Linux-命令-day01\Linux 命令 – day01_image_1.png)</p>
+<h2 id="2-2-文件和路径">2.2 文件和路径</h2>
+<p>说明：不同于 Windows 系统的⽂件路径的起点是盘符，Linux 系统的路径起点是’/'根目录<br>
+注意：</p>
 <blockquote>
 <ol>
-<li>&#x2F; 为根目录，是所有文件的路径的起点</li>
+<li>/ 为根目录，是所有文件的路径的起点</li>
 <li>根目录下的所有第一层级的文件夹，均不能随意进行修改</li>
 <li>掌握常用目录的作用即可</li>
-<li>&#x2F; 根目录，&#x2F;home 普通用户所在文件夹，&#x2F;root 系统管理员所在文件夹</li>
+<li>/ 根目录，/home 普通用户所在文件夹，/root 系统管理员所在文件夹</li>
 </ol>
 </blockquote>
-<p>![Linux 命令 – day01_image_2](.\img\Linux-命令-day01\Linux 命令 – day01_image_2.png)</p>
-<h1 id="03-远程连接操作"><a href="#03-远程连接操作" class="headerlink" title="03 远程连接操作"></a>03 远程连接操作</h1><p>说明：通过[远程连接⼯具]连接到服务器的操作即为远程连接<br>条件：<br>    1&gt; 服务器的 IP 地址<br>    2&gt; 服务器的账号和密码<br>注意：必须确保有网络连接条件</p>
-<h2 id="3-1-常见的远程连接工具"><a href="#3-1-常见的远程连接工具" class="headerlink" title="3.1 常见的远程连接工具"></a>3.1 常见的远程连接工具</h2><p>1 &gt; FinalShell（推荐）：功能强大，有颜值，好操作 (高级功能需要订阅)<br>2 &gt; XShell：个人用免费、商用收费<br>3 &gt; Putty：免费开源的<br>4 &gt; SecureCRT：收费<br>5 &gt; MobaXterm：免费</p>
-<h2 id="3-2-远程连接基本步骤"><a href="#3-2-远程连接基本步骤" class="headerlink" title="3.2 远程连接基本步骤"></a>3.2 远程连接基本步骤</h2><p>入职后需要向相关人员 (运维&#x2F;开发) 获取服务器 IP 地址及账号密码等信息<br>配合远程连接工具 (根据公司要求使用对应工具)，配置连接使用服务器即可</p>
-<h2 id="3-3-远程连接操作步骤"><a href="#3-3-远程连接操作步骤" class="headerlink" title="3.3 远程连接操作步骤"></a>3.3 远程连接操作步骤</h2><p>获取服务器 IP 地址<br>    打开服务器终端输入指令 <code>ifconfig</code> 获取 IP 地址信息<br>    默认可使用 <code>ip addr</code> 获取 IP 地址<br>在本地测试连通性<br>    在本机使用 <code>ping</code> 命令行来测试与服务器的连通性</p>
-<h2 id="3-4-远程连接工具设置步骤"><a href="#3-4-远程连接工具设置步骤" class="headerlink" title="3.4 远程连接工具设置步骤"></a>3.4 远程连接工具设置步骤</h2><p>新建 –&gt; SSH 连接<br>    远程连接依赖的命令 <code>SSH</code></p>
-<p>![Linux 命令 – day01_image_3](.\img\Linux-命令-day01\Linux 命令 – day01_image_3.png)</p>
-<p>![Linux 命令 – day01_image_4](.\img\Linux-命令-day01\Linux 命令 – day01_image_4.png)</p>
-<h1 id="04-Linux"><a href="#04-Linux" class="headerlink" title="04 Linux"></a>04 Linux</h1><h2 id="4-1-Linux-命令学习原则"><a href="#4-1-Linux-命令学习原则" class="headerlink" title="4.1 Linux 命令学习原则"></a>4.1 Linux 命令学习原则</h2><p>不要死记硬背 Linux 命令<br>务必要明确命令的基本组成形式</p>
-<h2 id="4-2-Linux-命令操作技巧"><a href="#4-2-Linux-命令操作技巧" class="headerlink" title="4.2 Linux 命令操作技巧"></a>4.2 Linux 命令操作技巧</h2><p>善用 <code>tab</code> 键进行文件名 &#x2F; 路径名 &#x2F; 命令的自动补全<br>使用 <code>↑  ↓ </code> 快速获取先前输入过的命令<br>命令开始执行后，若需要取消执行：<code>Ctrl + C</code></p>
-<h2 id="4-3-Linux-命令的基本组成"><a href="#4-3-Linux-命令的基本组成" class="headerlink" title="4.3 Linux 命令的基本组成"></a>4.3 Linux 命令的基本组成</h2><p># 命令  [-选项]  [参数]<br>command [-options] [parameter]<br>说明：<br>    command : 命令主体<br>    [-options] : 命令选项(可选), 根据命令可以显示更更加丰富的数据<br>    [parameter] : 命令参数(可选)，命令的操作对象，一般文件、目录、用户和进程等都可以作为参数被命令操作</p>
-<h1 id="05-Linux-命令-案例-1"><a href="#05-Linux-命令-案例-1" class="headerlink" title="05 Linux 命令 - 案例 1"></a>05 Linux 命令 - 案例 1</h1><p>ls&#x2F;pwd&#x2F;cd&#x2F;touch&#x2F;mkdir&#x2F;cp&#x2F;mv&#x2F;rm</p>
-<h3 id="Part-1-ls-pwd-cd-touch-mkdir"><a href="#Part-1-ls-pwd-cd-touch-mkdir" class="headerlink" title="Part 1 ls&#x2F;pwd&#x2F;cd&#x2F;touch&#x2F;mkdir"></a>Part 1 ls&#x2F;pwd&#x2F;cd&#x2F;touch&#x2F;mkdir</h3><p><code>pwd</code> – 查看当前路径位置<br><code>ls</code> – 查看当前目录下有哪些文件和文件夹<br><code>mkdir</code> – 创建一个文件夹&#x2F;创建多个文件夹<br><code>cd</code> – 切换到 xx 目录下<br><code>touch</code> – 创建一个文件<br>![Linux 命令 – day01_image_5](.\img\Linux-命令-day01\Linux 命令 – day01_image_5.png)</p>
-<h3 id="Part-2-cd-其他用法和-mv"><a href="#Part-2-cd-其他用法和-mv" class="headerlink" title="Part 2 cd 其他用法和 mv"></a>Part 2 cd 其他用法和 mv</h3><p><code>cd</code> – 切换目录 –&gt; 相对路径&#x2F;绝对路径<br><code>mv</code> – 默认用于移动文件到某一路径下，但如果目标文件名不是文件夹名或者文件名不存在，则视为修改文件名操作 –&gt; mv file aa （将 file 更名为 aa）<br>![Linux 命令 – day01_image_6](.\img\Linux-命令-day01\Linux 命令 – day01_image_6.png)<br>相对路径和绝对路径</p>
+<p>![Linux 命令 – day01_image_2](img\Linux-命令-day01\Linux 命令 – day01_image_2.png)</p>
+<h1>03 远程连接操作</h1>
+<p>说明：通过[远程连接⼯具]连接到服务器的操作即为远程连接<br>
+条件：<br>
+1&gt; 服务器的 IP 地址<br>
+2&gt; 服务器的账号和密码<br>
+注意：必须确保有网络连接条件</p>
+<h2 id="3-1-常见的远程连接工具">3.1 常见的远程连接工具</h2>
+<p>1 &gt; FinalShell（推荐）：功能强大，有颜值，好操作 (高级功能需要订阅)<br>
+2 &gt; XShell：个人用免费、商用收费<br>
+3 &gt; Putty：免费开源的<br>
+4 &gt; SecureCRT：收费<br>
+5 &gt; MobaXterm：免费</p>
+<h2 id="3-2-远程连接基本步骤">3.2 远程连接基本步骤</h2>
+<p>入职后需要向相关人员 (运维/开发) 获取服务器 IP 地址及账号密码等信息<br>
+配合远程连接工具 (根据公司要求使用对应工具)，配置连接使用服务器即可</p>
+<h2 id="3-3-远程连接操作步骤">3.3 远程连接操作步骤</h2>
+<p>获取服务器 IP 地址<br>
+打开服务器终端输入指令 <code>ifconfig</code> 获取 IP 地址信息<br>
+默认可使用 <code>ip addr</code> 获取 IP 地址<br>
+在本地测试连通性<br>
+在本机使用 <code>ping</code> 命令行来测试与服务器的连通性</p>
+<h2 id="3-4-远程连接工具设置步骤">3.4 远程连接工具设置步骤</h2>
+<p>新建 --&gt; SSH 连接<br>
+远程连接依赖的命令 <code>SSH</code></p>
+<p>![Linux 命令 – day01_image_3](img\Linux-命令-day01\Linux 命令 – day01_image_3.png)</p>
+<p>![Linux 命令 – day01_image_4](img\Linux-命令-day01\Linux 命令 – day01_image_4.png)</p>
+<h1>04 Linux</h1>
+<h2 id="4-1-Linux-命令学习原则">4.1 Linux 命令学习原则</h2>
+<p>不要死记硬背 Linux 命令<br>
+务必要明确命令的基本组成形式</p>
+<h2 id="4-2-Linux-命令操作技巧">4.2 Linux 命令操作技巧</h2>
+<p>善用 <code>tab</code> 键进行文件名 / 路径名 / 命令的自动补全<br>
+使用 <code>↑  ↓ </code> 快速获取先前输入过的命令<br>
+命令开始执行后，若需要取消执行：<code>Ctrl + C</code></p>
+<h2 id="4-3-Linux-命令的基本组成">4.3 Linux 命令的基本组成</h2>
+<p># 命令  [-选项]  [参数]<br>
+command [-options] [parameter]<br>
+说明：<br>
+command : 命令主体<br>
+[-options] : 命令选项(可选), 根据命令可以显示更更加丰富的数据<br>
+[parameter] : 命令参数(可选)，命令的操作对象，一般文件、目录、用户和进程等都可以作为参数被命令操作</p>
+<h1>05 Linux 命令 - 案例 1</h1>
+<p>ls/pwd/cd/touch/mkdir/cp/mv/rm</p>
+<h3 id="Part-1-ls-pwd-cd-touch-mkdir">Part 1 ls/pwd/cd/touch/mkdir</h3>
+<p><code>pwd</code> – 查看当前路径位置<br>
+<code>ls</code> – 查看当前目录下有哪些文件和文件夹<br>
+<code>mkdir</code> – 创建一个文件夹/创建多个文件夹<br>
+<code>cd</code> – 切换到 xx 目录下<br>
+<code>touch</code> – 创建一个文件<br>
+![Linux 命令 – day01_image_5](img\Linux-命令-day01\Linux 命令 – day01_image_5.png)</p>
+<h3 id="Part-2-cd-其他用法和-mv">Part 2 cd 其他用法和 mv</h3>
+<p><code>cd</code> – 切换目录 --&gt; 相对路径/绝对路径<br>
+<code>mv</code> – 默认用于移动文件到某一路径下，但如果目标文件名不是文件夹名或者文件名不存在，则视为修改文件名操作 --&gt; mv file aa （将 file 更名为 aa）<br>
+![Linux 命令 – day01_image_6](img\Linux-命令-day01\Linux 命令 – day01_image_6.png)<br>
+相对路径和绝对路径</p>
 <blockquote>
-<p>相对路径：凡是路径信息以 <code>.</code> 或者 <code>..</code> 开头的均为相对路径<br>绝对路径：凡是路径信息以 <code>/</code> 或者 <code>~</code> 开头的均为绝对路径<br>注释：<br><code>.</code>：当前路径下，一般省略<br><code>..</code>：上一层目录<br><code>/</code>：根目录<br><code>~</code>：当前用户的家目录</p>
+<p>相对路径：凡是路径信息以 <code>.</code> 或者 <code>..</code> 开头的均为相对路径<br>
+绝对路径：凡是路径信息以 <code>/</code> 或者 <code>~</code> 开头的均为绝对路径<br>
+注释：<br>
+<code>.</code>：当前路径下，一般省略<br>
+<code>..</code>：上一层目录<br>
+<code>/</code>：根目录<br>
+<code>~</code>：当前用户的家目录</p>
 </blockquote>
-<h3 id="Part-3-cp复制文件和文件夹"><a href="#Part-3-cp复制文件和文件夹" class="headerlink" title="Part 3 cp复制文件和文件夹"></a>Part 3 cp复制文件和文件夹</h3><p>复制文件：<code>cp aa adir</code> 复制文件 aa 到 adir 目录下<br>复制文件夹：<code>cp -r bdir/ cdir/</code> 复制文件夹 bdir 到 cdir 下<br>![Linux 命令 – day01_image_7](.\img\Linux-命令-day01\Linux 命令 – day01_image_7.png)</p>
-<h3 id="Part-4-mv-touch-创建多个文件-rm-删除文件和文件夹及所有文件"><a href="#Part-4-mv-touch-创建多个文件-rm-删除文件和文件夹及所有文件" class="headerlink" title="Part 4 mv&#x2F;touch 创建多个文件&#x2F;rm 删除文件和文件夹及所有文件"></a>Part 4 mv&#x2F;touch 创建多个文件&#x2F;rm 删除文件和文件夹及所有文件</h3><p><code>mv aa cdir/bdir/</code> – 移动文件 aa 到 bdir 文件夹<br><code>touch bb cc</code> – 创建多个文件 bb cc<br><code>rm -i bb</code> – 删除 bb 文件<br><code>rm -ir adir/</code> – 删除 adir 文件夹<br><code>rm -f aa</code> – 强制删除<br>![Linux 命令 – day01_image_8](.\img\Linux-命令-day01\Linux 命令 – day01_image_8.png)</p>
+<h3 id="Part-3-cp复制文件和文件夹">Part 3 cp复制文件和文件夹</h3>
+<p>复制文件：<code>cp aa adir</code> 复制文件 aa 到 adir 目录下<br>
+复制文件夹：<code>cp -r bdir/ cdir/</code> 复制文件夹 bdir 到 cdir 下<br>
+![Linux 命令 – day01_image_7](img\Linux-命令-day01\Linux 命令 – day01_image_7.png)</p>
+<h3 id="Part-4-mv-touch-创建多个文件-rm-删除文件和文件夹及所有文件">Part 4 mv/touch 创建多个文件/rm 删除文件和文件夹及所有文件</h3>
+<p><code>mv aa cdir/bdir/</code> – 移动文件 aa 到 bdir 文件夹<br>
+<code>touch bb cc</code> – 创建多个文件 bb cc<br>
+<code>rm -i bb</code> – 删除 bb 文件<br>
+<code>rm -ir adir/</code> – 删除 adir 文件夹<br>
+<code>rm -f aa</code> – 强制删除<br>
+![Linux 命令 – day01_image_8](img\Linux-命令-day01\Linux 命令 – day01_image_8.png)</p>
 
     </div>
 
@@ -358,7 +429,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%B6%E6%AE%B5%E5%86%85%E5%AE%B9"><span class="nav-number">1.</span> <span class="nav-text">阶段内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#01-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number"></span> <span class="nav-text">01 操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">1.1 介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%88%86%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">1.2 分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#02-Linux-%E7%B3%BB%E7%BB%9F"><span class="nav-number"></span> <span class="nav-text">02 Linux 系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Linux-%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC"><span class="nav-number">1.</span> <span class="nav-text">2.1 Linux 发行版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E6%96%87%E4%BB%B6%E5%92%8C%E8%B7%AF%E5%BE%84"><span class="nav-number">2.</span> <span class="nav-text">2.2 文件和路径</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#03-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%93%8D%E4%BD%9C"><span class="nav-number"></span> <span class="nav-text">03 远程连接操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%B8%B8%E8%A7%81%E7%9A%84%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%B7%A5%E5%85%B7"><span class="nav-number">1.</span> <span class="nav-text">3.1 常见的远程连接工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">3.2 远程连接基本步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text">3.3 远程连接操作步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%B7%A5%E5%85%B7%E8%AE%BE%E7%BD%AE%E6%AD%A5%E9%AA%A4"><span class="nav-number">4.</span> <span class="nav-text">3.4 远程连接工具设置步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#04-Linux"><span class="nav-number"></span> <span class="nav-text">04 Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Linux-%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0%E5%8E%9F%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">4.1 Linux 命令学习原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Linux-%E5%91%BD%E4%BB%A4%E6%93%8D%E4%BD%9C%E6%8A%80%E5%B7%A7"><span class="nav-number">2.</span> <span class="nav-text">4.2 Linux 命令操作技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-Linux-%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90"><span class="nav-number">3.</span> <span class="nav-text">4.3 Linux 命令的基本组成</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#05-Linux-%E5%91%BD%E4%BB%A4-%E6%A1%88%E4%BE%8B-1"><span class="nav-number"></span> <span class="nav-text">05 Linux 命令 - 案例 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-1-ls-pwd-cd-touch-mkdir"><span class="nav-number">0.1.</span> <span class="nav-text">Part 1 ls&#x2F;pwd&#x2F;cd&#x2F;touch&#x2F;mkdir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-2-cd-%E5%85%B6%E4%BB%96%E7%94%A8%E6%B3%95%E5%92%8C-mv"><span class="nav-number">0.2.</span> <span class="nav-text">Part 2 cd 其他用法和 mv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-3-cp%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">0.3.</span> <span class="nav-text">Part 3 cp复制文件和文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-4-mv-touch-%E5%88%9B%E5%BB%BA%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6-rm-%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%8A%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6"><span class="nav-number">0.4.</span> <span class="nav-text">Part 4 mv&#x2F;touch 创建多个文件&#x2F;rm 删除文件和文件夹及所有文件</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%98%B6%E6%AE%B5%E5%86%85%E5%AE%B9"><span class="nav-number">1.</span> <span class="nav-text">阶段内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">01 操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">1.1 介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%88%86%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">1.2 分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">02 Linux 系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Linux-%E5%8F%91%E8%A1%8C%E7%89%88%E6%9C%AC"><span class="nav-number">1.</span> <span class="nav-text">2.1 Linux 发行版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E6%96%87%E4%BB%B6%E5%92%8C%E8%B7%AF%E5%BE%84"><span class="nav-number">2.</span> <span class="nav-text">2.2 文件和路径</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">03 远程连接操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%B8%B8%E8%A7%81%E7%9A%84%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%B7%A5%E5%85%B7"><span class="nav-number">1.</span> <span class="nav-text">3.1 常见的远程连接工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">3.2 远程连接基本步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.</span> <span class="nav-text">3.3 远程连接操作步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%B7%A5%E5%85%B7%E8%AE%BE%E7%BD%AE%E6%AD%A5%E9%AA%A4"><span class="nav-number">4.</span> <span class="nav-text">3.4 远程连接工具设置步骤</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">04 Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Linux-%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0%E5%8E%9F%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">4.1 Linux 命令学习原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-Linux-%E5%91%BD%E4%BB%A4%E6%93%8D%E4%BD%9C%E6%8A%80%E5%B7%A7"><span class="nav-number">2.</span> <span class="nav-text">4.2 Linux 命令操作技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-Linux-%E5%91%BD%E4%BB%A4%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90"><span class="nav-number">3.</span> <span class="nav-text">4.3 Linux 命令的基本组成</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">05 Linux 命令 - 案例 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-1-ls-pwd-cd-touch-mkdir"><span class="nav-number">0.1.</span> <span class="nav-text">Part 1 ls&#x2F;pwd&#x2F;cd&#x2F;touch&#x2F;mkdir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-2-cd-%E5%85%B6%E4%BB%96%E7%94%A8%E6%B3%95%E5%92%8C-mv"><span class="nav-number">0.2.</span> <span class="nav-text">Part 2 cd 其他用法和 mv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-3-cp%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">0.3.</span> <span class="nav-text">Part 3 cp复制文件和文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part-4-mv-touch-%E5%88%9B%E5%BB%BA%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6-rm-%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8F%8A%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6"><span class="nav-number">0.4.</span> <span class="nav-text">Part 4 mv&#x2F;touch 创建多个文件&#x2F;rm 删除文件和文件夹及所有文件</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
