@@ -22,15 +22,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Title: [[Linux 命令 – day03]] Tags: #🛠️ Author: Hazel🥰 Description: Creation time: 2024-08-20 22:53 Reviewed Date: [[2024-08-20]] 个人小结：  chmod find ln -s tar&#x2F;gzip&#x2F;zip&#x2F;unzip vi 命令行文本编辑器     Linux 命令 7">
+  <meta name="description" content="Title: Linux 命令 – day03 Tags: 🛠️ Author: Hazel🥰 Description: Creation time: 2024-08-20 22:53 Reviewed Date: 2024-08-20 个人小结：  chmod find ln -s tar&#x2F;gzip&#x2F;zip&#x2F;unzip vi 命令行文本编辑器     Linux 命令 7: chmod 修">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 命令 -- day03">
 <meta property="og:url" content="http://example.com/2024/08/22/Linux-%E5%91%BD%E4%BB%A4-day03/index.html">
 <meta property="og:site_name" content="LuckyHazel">
-<meta property="og:description" content="Title: [[Linux 命令 – day03]] Tags: #🛠️ Author: Hazel🥰 Description: Creation time: 2024-08-20 22:53 Reviewed Date: [[2024-08-20]] 个人小结：  chmod find ln -s tar&#x2F;gzip&#x2F;zip&#x2F;unzip vi 命令行文本编辑器     Linux 命令 7">
+<meta property="og:description" content="Title: Linux 命令 – day03 Tags: 🛠️ Author: Hazel🥰 Description: Creation time: 2024-08-20 22:53 Reviewed Date: 2024-08-20 个人小结：  chmod find ln -s tar&#x2F;gzip&#x2F;zip&#x2F;unzip vi 命令行文本编辑器     Linux 命令 7: chmod 修">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-22T15:20:10.000Z">
-<meta property="article:modified_time" content="2024-08-22T15:20:42.071Z">
+<meta property="article:modified_time" content="2024-09-27T12:57:36.375Z">
 <meta property="article:author" content="Hazel">
 <meta name="twitter:card" content="summary">
 
@@ -184,10 +184,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-08-22 23:20:10 / 修改时间：23:20:42" itemprop="dateCreated datePublished" datetime="2024-08-22T23:20:10+08:00">2024-08-22</time>
+              <time title="创建时间：2024-08-22 23:20:10" itemprop="dateCreated datePublished" datetime="2024-08-22T23:20:10+08:00">2024-08-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-27 20:57:36" itemprop="dateModified" datetime="2024-09-27T20:57:36+08:00">2024-09-27</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -199,6 +205,10 @@
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/Linux/Day03/" itemprop="url" rel="index"><span itemprop="name">Day03</span></a>
                 </span>
             </span>
 
@@ -214,12 +224,12 @@
 
       
         <ul>
-<li><code>Title:</code> [[Linux 命令 – day03]]</li>
-<li><code>Tags:</code> #🛠️</li>
+<li><code>Title:</code> Linux 命令 – day03</li>
+<li><code>Tags:</code> 🛠️</li>
 <li><code>Author:</code> Hazel🥰</li>
 <li><code>Description:</code></li>
 <li><code>Creation time:</code> <code>2024-08-20 22:53</code></li>
-<li><code>Reviewed Date:</code> [[2024-08-20]]</li>
+<li><code>Reviewed Date:</code> 2024-08-20</li>
 <li><code>个人小结：</code>
 <ul>
 <li>chmod</li>
@@ -237,22 +247,22 @@
 第一位：文件类型  <code>-</code> 为普通文件 <code>d</code> 文件夹<br>
 后续每三个值为一部分，一共为三个部分：<code>用户/用户组/其他人</code><br>
 每一组的组成 <code>r/w/x/-</code> 对应权限为 <code>读取/写入/执行/无权限</code><br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_1.png)<br>
+![Linux 命令 – day03_image_1](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_1-1727441621044-78.png)<br>
 对照表<br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_2.png)</p>
+![Linux 命令 – day03_image_2](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_2-1727441636454-81.png)</p>
 <h2 id="【掌握】修改文件权限：数字法">【掌握】修改文件权限：数字法</h2>
 <p>权限对应数值<br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_3.png)<br>
+![Linux 命令 – day03_image_3](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_3-1727441676878-84.png)<br>
 案例实现<br>
 <code>touch cm_demo</code> – 创建文件<br>
 <code>ll 等价于 ls -l</code> – 查看文件的权限状态<br>
-<code>chmod 763 cm_demo</code> – 修改文件的权限，16 进制（读写执行-读写-写执行）<br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_4.png)</p>
+<code>chmod 763 cm_demo</code> – 修改文件的权限，16 进制（读写执行-读写-写执行)<br>
+![Linux 命令 – day03_image_4](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_4-1727441691430-87.png)</p>
 <h2 id="修改文件权限：字母法">修改文件权限：字母法</h2>
 <p>组别: <code>u</code> 拥有者   <code>g</code> 用户组   <code>o</code> 其他⼈   <code>a</code> 以上全部<br>
 修改: <code>+</code> 增加权限  <code>-</code> 删除权限  <code>=</code> 赋予权限<br>
 权限: <code>r</code> 可读   <code>w</code> 可写  <code>x</code> 可执行  <code>-</code> ⽆权限<br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_5.png)</p>
+![Linux 命令 – day03_image_5](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_5-1727441704701-90.png)</p>
 <blockquote>
 <ol>
 <li>必须明确文件权限的含义</li>
@@ -264,32 +274,32 @@
 <h1>Linux 命令 9: find 查找文件</h1>
 <p><code>find 查找路径信息 -name 目标文件名</code><br>
 可利用 <code>*</code> 实现模糊匹配<br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_6.png)</p>
+![Linux 命令 – day03_image_6](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_6-1727441717651-93.png)</p>
 <h1>Linux 命令 10: ln -s 链接文件</h1>
 <p>注：需要使用 <code>-s</code> 创建软连接（类似于 Windows 系统下的快捷方式）<br>
 <code>ln -s 原文件名 链接文件名</code> – 软链接，类似于 Windows 系统下的快捷方式<br>
 <code>ln 原文件名 链接文件名</code> – 硬链接，类似于复制文件<br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_7.png)<br>
+![Linux 命令 – day03_image_7](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_7-1727441730661-96.png)<br>
 扩展：硬链接<br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_8.png)</p>
+![Linux 命令 – day03_image_8](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_8-1727441743771-99.png)</p>
 <h1>Linux 命令 11: tar/gzip/zip/unzip</h1>
 <h2 id="Part-1-tar-gzip-打包压缩和解压解包">Part 1: tar/gzip 打包压缩和解压解包</h2>
 <p><code>tar -zcvf 包名.tar.gz 目标文件</code> – 打包和压缩<br>
 <code>tar -zxvf 包名.tar.gz -C 解压目录</code> – 解压和解包<br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_9.png)</p>
+![Linux 命令 – day03_image_9](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_9-1727441759853-102.png)</p>
 <h2 id="Part-2-zip-压缩-unzip-解压">Part 2: zip 压缩/unzip 解压</h2>
 <p><code>zip -r 压缩包名 目标文件</code> – 压缩，目标为文件夹时使用 <code>-r</code> 来处理文件夹内部的所有文件<br>
 <code>unzip -d 解压路径 压缩包名</code> – 解压<br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_10.png)</p>
+![Linux 命令 – day03_image_10](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_10-1727441773811-105.png)</p>
 <h1>Linux 命令 12: vi 命令行文本编辑器</h1>
 <p>基本操作流程<br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_11.png)<br>
+![Linux 命令 – day03_image_11](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_11-1727441787314-108.png)<br>
 命令模式<br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_12.png)<br>
+![Linux 命令 – day03_image_12](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_12-1727441813834-113.png)<br>
 输入模式<br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_13.png)<br>
+![Linux 命令 – day03_image_13](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_13-1727441823891-115.png)<br>
 末行模式<br>
-![](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_14.png)</p>
+![Linux 命令 – day03_image_14](E:\HazelDocuments\Blog\source_posts\img\Linux-命令-day03\Linux 命令 – day03_image_14-1727441837579-117.png)</p>
 <h1>yum 软件包管理工具</h1>
 <p>==yum==（ Yellow dog Updater, Modified）：是⼀个在 Linux 系统中常用的软件包管理器。<br>
 yum 提供了查找、安装、删除某⼀个、⼀组甚⾄全部软件包的命令，⽽且命令简洁又好记。<br>
@@ -419,7 +429,7 @@ SQLite: 轻量级数据库，主要应⽤在移动平台<br>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
